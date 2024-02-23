@@ -4,7 +4,7 @@ import { Product } from '../components/Product';
 import { Pagination } from '../components/Pagination';
 
 // URL и данные аутентификации для API
-const apiUrl = 'http://api.valantis.store:40000/';
+const apiUrl = 'https://api.valantis.store:40000/';
 const password = 'Valantis';
 
 // Функция для генерации строки аутентификации на основе временной метки и пароля
