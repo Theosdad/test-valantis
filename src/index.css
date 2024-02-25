@@ -8,7 +8,8 @@ body {
 }
 
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
@@ -48,13 +49,13 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 40px;
   height: 40px;
   padding: 5px 10px;
 
   background-color: transparent;
-  border: 1px solid gray;
+  border: 3px solid black;
   border-radius: 50%;
   font-weight: 700;
   cursor: pointer;
@@ -62,4 +63,48 @@ main {
 
 .pagination .disabled {
   pointer-events: none;
+  border-color: gray;
+}
+
+.filter-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+}
+
+.filter-wrapper input {
+  padding: 12px;
+  border: 3px solid gray;
+  border-radius: 5px;
+  flex-grow: 1;
+
+  font-size: 18px;
+  -moz-appearance: textfield;
+}
+
+.filter-wrapper input::-webkit-outer-spin-button,
+.filter-wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-wrapper button {
+  flex-grow: 1;
+  padding: 12px;
+  background-color: #ebebeb;
+  border: 3px solid gray;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
 }

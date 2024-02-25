@@ -164,23 +164,27 @@ export const Main = () => {
 
                     <div className="filter-section">
                         <h2>Отфильровать</h2>
-                        <input
-                            type="text"
-                            placeholder="По названию"
-                            onChange={(e) => handleFilterChange('name', e.target.value)}
-                        />
-                        <input
-                            type="number"
-                            placeholder="По цене"
-                            onChange={(e) => handleFilterChange('price', e.target.value)}
-                        />
-                        <input
-                            type="text"
-                            placeholder="По бренду"
-                            onChange={(e) => handleFilterChange('brand', e.target.value)}
-                        />
-                        <button onClick={applyFilters}>Применить фильтры</button>
-                        <button onClick={handleResetFilters}>Сбросить фильтры</button>
+                        <div className='filter-wrapper'>
+                            <input
+                                type="text"
+                                placeholder="По названию"
+                                onChange={(e) => handleFilterChange('name', e.target.value)}
+                            />
+                            <input
+                                type="number"
+                                placeholder="По цене"
+                                onChange={(e) => handleFilterChange('price', e.target.value)}
+                            />
+                            <input
+                                type="text"
+                                placeholder="По бренду"
+                                onChange={(e) => handleFilterChange('brand', e.target.value)}
+                            />
+                            <div className='filter-buttons'>
+                                <button onClick={applyFilters}>Применить фильтры</button>
+                                <button onClick={handleResetFilters}>Сбросить фильтры</button>
+                            </div>
+                        </div>
                     </div>
                     <ul className='product-list'>
                         {renderProducts()}
